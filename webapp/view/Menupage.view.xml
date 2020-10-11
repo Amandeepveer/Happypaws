@@ -1,0 +1,169 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.team25HappyPaws.controller.Menupage" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:layout1="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="70px" top="438px">
+                        <layout:control>
+                            <ObjectMarker type="Draft" visibility="IconAndText"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="0px" top="338px">
+                        <layout:control>
+                            <List mode="SingleSelectMaster" width="100%" headerText="PET SITTERS TESTIMONIALS" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <ObjectListItem intro="" title="TESTIMONIALS" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false" press="_onObjectListItemPress1">
+                                        <attributes/>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="10px" top="7px">
+                        <layout:control>
+                            <MenuButton text="Menu" type="Default" width="auto" enabled="true" buttonMode="Regular" useDefaultActionOnly="false">
+                                <menu>
+                                    <Menu title="OPTIONS">
+                                        <items>
+                                            <MenuItem text="RATING" enabled="true" icon="sap-icon://edit" visible="true" startsSection="false" press="_onMenuItemPress">
+                                                <items/>
+                                            </MenuItem>
+                                            <MenuItem text="FEEDBACK" enabled="true" icon="sap-icon://save" visible="true" startsSection="false" press="_onMenuItemPress1">
+                                                <items/>
+                                            </MenuItem>
+                                        </items>
+                                    </Menu>
+                                </menu>
+                            </MenuButton>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="0px" top="402px">
+                        <layout:control>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements/>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="8px" top="104px">
+                        <layout:control>
+                            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                                <items>
+                                    <IconTabFilter icon="sap-icon://hint" iconColor="Positive" text="" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                                        <content>
+                                            <ObjectIdentifier title="PROFILE" text="" titleActive="false" visible="true"/>
+                                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                                                <infoToolbar/>
+                                                <headerToolbar/>
+                                                <columns>
+                                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                                        <header>
+                                                            <Text text="ANGEL" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                        </header>
+                                                        <footer/>
+                                                    </Column>
+                                                </columns>
+                                                <items>
+                                                    <ColumnListItem type="Active" press="_onRowPress">
+                                                        <cells>
+                                                            <layout1:HorizontalLayout>
+                                                                <layout1:content/>
+                                                            </layout1:HorizontalLayout>
+                                                        </cells>
+                                                    </ColumnListItem>
+                                                    <ColumnListItem type="Active" press="_onRowPress1">
+                                                        <cells>
+                                                            <ObjectIdentifier title="PET PICTURES" text="" titleActive="false" visible="true"/>
+                                                        </cells>
+                                                    </ColumnListItem>
+                                                    <ColumnListItem type="Active" press="_onRowPress2">
+                                                        <cells>
+                                                            <ObjectIdentifier title="MY SERVICES" text="" titleActive="false" visible="true"/>
+                                                        </cells>
+                                                    </ColumnListItem>
+                                                </items>
+                                            </Table>
+                                        </content>
+                                    </IconTabFilter>
+                                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                                </items>
+                                <content>
+                                    <Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </content>
+                            </IconTabBar>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="0px" top="55px">
+                        <layout:control>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title>
+                                    <core:Title text="PET SITTER PROFILE INFO" level="Auto" icon="sap-icon://hint"/>
+                                </form:title>
+                                <form:formContainers/>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="229px" top="0px">
+                        <layout:control>
+                            <Button text="" type="Default" icon="sap-icon://log" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="0px" top="457px">
+                        <layout:control>
+                            <List mode="SingleSelectMaster" width="100%" headerText="MAP COMPONENT" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress2">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <ObjectListItem intro="" title="MAP" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false" press="_onObjectListItemPress3">
+                                        <attributes/>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

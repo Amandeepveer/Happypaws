@@ -1,0 +1,46 @@
+{
+    "dataBinding": {
+        "/webapp/view/Login.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Registration.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Menupage.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/PetSitterPics.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/MyServices.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/PetSitting.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Payment.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Confirmation.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Rating.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Feedback.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Profiledata.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Testimonials.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Page17.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Page19.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}

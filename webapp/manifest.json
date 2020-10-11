@@ -1,0 +1,311 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.team25HappyPaws",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"dataSources": {
+			"local": {
+				"uri": "/here/goes/your/serviceUrl/local/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "generated.app.view.Page19",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"dataSource": "local",
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"loadMetadataAsync": false,
+					"json": true,
+					"bJSON": true,
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"useBatch": true,
+					"refreshAfterChange": false,
+					"disableHeadRequestForToken": true
+				}
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.team25HappyPaws.view",
+				"controlId": "App",
+				"clearTarget": false,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"Login"
+					]
+				}
+			},
+			"targets": {
+				"Login": {
+					"controlAggregation": "pages",
+					"viewName": "Login",
+					"viewId": "Login",
+					"viewLevel": 11,
+					"transition": "slide"
+				},
+				"Registration": {
+					"controlAggregation": "pages",
+					"viewName": "Registration",
+					"viewId": "Registration",
+					"viewLevel": 13,
+					"transition": "slide"
+				},
+				"Menupage": {
+					"controlAggregation": "pages",
+					"viewName": "Menupage",
+					"viewId": "Menupage",
+					"viewLevel": 7,
+					"transition": "slide"
+				},
+				"PetSitterPics": {
+					"controlAggregation": "pages",
+					"viewName": "PetSitterPics",
+					"viewId": "PetSitterPics",
+					"viewLevel": 6,
+					"transition": "slide"
+				},
+				"MyServices": {
+					"controlAggregation": "pages",
+					"viewName": "MyServices",
+					"viewId": "MyServices",
+					"viewLevel": 3,
+					"transition": "slide"
+				},
+				"PetSitting": {
+					"controlAggregation": "pages",
+					"viewName": "PetSitting",
+					"viewId": "PetSitting",
+					"viewLevel": 4,
+					"transition": "slide"
+				},
+				"Payment": {
+					"controlAggregation": "pages",
+					"viewName": "Payment",
+					"viewId": "Payment",
+					"viewLevel": 5,
+					"transition": "slide"
+				},
+				"Confirmation": {
+					"controlAggregation": "pages",
+					"viewName": "Confirmation",
+					"viewId": "Confirmation",
+					"viewLevel": 8,
+					"transition": "slide"
+				},
+				"Rating": {
+					"controlAggregation": "pages",
+					"viewName": "Rating",
+					"viewId": "Rating",
+					"viewLevel": 9,
+					"transition": "slide"
+				},
+				"Feedback": {
+					"controlAggregation": "pages",
+					"viewName": "Feedback",
+					"viewId": "Feedback",
+					"viewLevel": 10,
+					"transition": "slide"
+				},
+				"Profiledata": {
+					"controlAggregation": "pages",
+					"viewName": "Profiledata",
+					"viewId": "Profiledata",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Testimonials": {
+					"controlAggregation": "pages",
+					"viewName": "Testimonials",
+					"viewId": "Testimonials",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Page17": {
+					"controlAggregation": "pages",
+					"viewName": "Page17",
+					"viewId": "Page17",
+					"viewLevel": 12,
+					"transition": "slide"
+				},
+				"Page19": {
+					"controlAggregation": "pages",
+					"viewName": "Page19",
+					"viewId": "Page19",
+					"viewLevel": 1,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "Login/:context:",
+					"name": "Login",
+					"target": [
+						"Login"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"Login"
+					]
+				},
+				{
+					"pattern": "Registration/:context:",
+					"name": "Registration",
+					"target": [
+						"Registration"
+					]
+				},
+				{
+					"pattern": "Menupage/:context:",
+					"name": "Menupage",
+					"target": [
+						"Menupage"
+					]
+				},
+				{
+					"pattern": "PetSitterPics/:context:",
+					"name": "PetSitterPics",
+					"target": [
+						"PetSitterPics"
+					]
+				},
+				{
+					"pattern": "MyServices/:context:",
+					"name": "MyServices",
+					"target": [
+						"MyServices"
+					]
+				},
+				{
+					"pattern": "PetSitting/:context:",
+					"name": "PetSitting",
+					"target": [
+						"PetSitting"
+					]
+				},
+				{
+					"pattern": "Payment/:context:",
+					"name": "Payment",
+					"target": [
+						"Payment"
+					]
+				},
+				{
+					"pattern": "Confirmation/:context:",
+					"name": "Confirmation",
+					"target": [
+						"Confirmation"
+					]
+				},
+				{
+					"pattern": "Rating/:context:",
+					"name": "Rating",
+					"target": [
+						"Rating"
+					]
+				},
+				{
+					"pattern": "Feedback/:context:",
+					"name": "Feedback",
+					"target": [
+						"Feedback"
+					]
+				},
+				{
+					"pattern": "Profiledata/:context:",
+					"name": "Profiledata",
+					"target": [
+						"Profiledata"
+					]
+				},
+				{
+					"pattern": "Testimonials/:context:",
+					"name": "Testimonials",
+					"target": [
+						"Testimonials"
+					]
+				},
+				{
+					"pattern": "Page17/:context:",
+					"name": "Page17",
+					"target": [
+						"Page17"
+					]
+				},
+				{
+					"pattern": "Page19/:context:",
+					"name": "Page19",
+					"target": [
+						"Page19"
+					]
+				}
+			]
+		}
+	}
+}

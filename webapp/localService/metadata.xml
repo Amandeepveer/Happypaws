@@ -1,0 +1,158 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="80eb04ffa7c34eac14233f0d" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="80eb04ffa7c34eac14233f0d_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="SERVICESet" EntityType="80eb04ffa7c34eac14233f0d.SERVICE" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="SERVICERelationNameTESTIMONIALS" Association="80eb04ffa7c34eac14233f0d.SERVICERelationNameTESTIMONIALS" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="SERVICESet" Role="FromRole_SERVICERelationNameTESTIMONIALS"/>
+                    <End EntitySet="TESTIMONIALSSet" Role="ToRole_SERVICERelationNameTESTIMONIALS"/>
+                </AssociationSet>
+                <AssociationSet Name="SERVICERelationName1CONFIRMATIOM" Association="80eb04ffa7c34eac14233f0d.SERVICERelationName1CONFIRMATIOM" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="SERVICESet" Role="FromRole_SERVICERelationName1CONFIRMATIOM"/>
+                    <End EntitySet="CONFIRMATIOMSet" Role="ToRole_SERVICERelationName1CONFIRMATIOM"/>
+                </AssociationSet>
+                <AssociationSet Name="SERVICERelationName2RATINGFEEDBACK" Association="80eb04ffa7c34eac14233f0d.SERVICERelationName2RATINGFEEDBACK" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="SERVICESet" Role="FromRole_SERVICERelationName2RATINGFEEDBACK"/>
+                    <End EntitySet="RATINGFEEDBACKSet" Role="ToRole_SERVICERelationName2RATINGFEEDBACK"/>
+                </AssociationSet>
+                <EntitySet Name="PETSITSet" EntityType="80eb04ffa7c34eac14233f0d.PETSIT" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="PETSITRelationNamePAYMENT" Association="80eb04ffa7c34eac14233f0d.PETSITRelationNamePAYMENT" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="PETSITSet" Role="FromRole_PETSITRelationNamePAYMENT"/>
+                    <End EntitySet="PAYMENTSet" Role="ToRole_PETSITRelationNamePAYMENT"/>
+                </AssociationSet>
+                <AssociationSet Name="PETSITRelationName1PROFILEDATA" Association="80eb04ffa7c34eac14233f0d.PETSITRelationName1PROFILEDATA" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="PETSITSet" Role="FromRole_PETSITRelationName1PROFILEDATA"/>
+                    <End EntitySet="PROFILEDATASet" Role="ToRole_PETSITRelationName1PROFILEDATA"/>
+                </AssociationSet>
+                <EntitySet Name="PAYMENTSet" EntityType="80eb04ffa7c34eac14233f0d.PAYMENT" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="PROFILEDATASet" EntityType="80eb04ffa7c34eac14233f0d.PROFILEDATA" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="TESTIMONIALSSet" EntityType="80eb04ffa7c34eac14233f0d.TESTIMONIALS" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="CONFIRMATIOMSet" EntityType="80eb04ffa7c34eac14233f0d.CONFIRMATIOM" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="RATINGFEEDBACKSet" EntityType="80eb04ffa7c34eac14233f0d.RATINGFEEDBACK" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="SERVICE">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="SERVICE" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SERVICE"/>
+                <Property Name="PETSITTER" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PETSITTER"/>
+                <NavigationProperty Name="RelationName" Relationship="80eb04ffa7c34eac14233f0d.SERVICERelationNameTESTIMONIALS" FromRole="FromRole_SERVICERelationNameTESTIMONIALS" ToRole="ToRole_SERVICERelationNameTESTIMONIALS"/>
+                <NavigationProperty Name="RelationName1" Relationship="80eb04ffa7c34eac14233f0d.SERVICERelationName1CONFIRMATIOM" FromRole="FromRole_SERVICERelationName1CONFIRMATIOM" ToRole="ToRole_SERVICERelationName1CONFIRMATIOM"/>
+                <NavigationProperty Name="RelationName2" Relationship="80eb04ffa7c34eac14233f0d.SERVICERelationName2RATINGFEEDBACK" FromRole="FromRole_SERVICERelationName2RATINGFEEDBACK" ToRole="ToRole_SERVICERelationName2RATINGFEEDBACK"/>
+            </EntityType>
+            <Association Name="SERVICERelationNameTESTIMONIALS">
+                <End Type="80eb04ffa7c34eac14233f0d.SERVICE" Multiplicity="1" Role="FromRole_SERVICERelationNameTESTIMONIALS"/>
+                <End Type="80eb04ffa7c34eac14233f0d.TESTIMONIALS" Multiplicity="*" Role="ToRole_SERVICERelationNameTESTIMONIALS"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SERVICERelationNameTESTIMONIALS">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SERVICERelationNameTESTIMONIALS">
+                        <PropertyRef Name="___FK_737d95e23e69a680144497d4_00026"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SERVICERelationName1CONFIRMATIOM">
+                <End Type="80eb04ffa7c34eac14233f0d.SERVICE" Multiplicity="1" Role="FromRole_SERVICERelationName1CONFIRMATIOM"/>
+                <End Type="80eb04ffa7c34eac14233f0d.CONFIRMATIOM" Multiplicity="*" Role="ToRole_SERVICERelationName1CONFIRMATIOM"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SERVICERelationName1CONFIRMATIOM">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SERVICERelationName1CONFIRMATIOM">
+                        <PropertyRef Name="___FK_737d95e23e69a680144497d4_00030"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SERVICERelationName2RATINGFEEDBACK">
+                <End Type="80eb04ffa7c34eac14233f0d.SERVICE" Multiplicity="1" Role="FromRole_SERVICERelationName2RATINGFEEDBACK"/>
+                <End Type="80eb04ffa7c34eac14233f0d.RATINGFEEDBACK" Multiplicity="*" Role="ToRole_SERVICERelationName2RATINGFEEDBACK"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SERVICERelationName2RATINGFEEDBACK">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SERVICERelationName2RATINGFEEDBACK">
+                        <PropertyRef Name="___FK_737d95e23e69a680144497d4_00034"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="PETSIT">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Rangepets" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+                <Property Name="dropoff" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="dropoff"/>
+                <Property Name="pickup" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="pickup"/>
+                <Property Name="price" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="price"/>
+                <NavigationProperty Name="RelationName" Relationship="80eb04ffa7c34eac14233f0d.PETSITRelationNamePAYMENT" FromRole="FromRole_PETSITRelationNamePAYMENT" ToRole="ToRole_PETSITRelationNamePAYMENT"/>
+                <NavigationProperty Name="RelationName1" Relationship="80eb04ffa7c34eac14233f0d.PETSITRelationName1PROFILEDATA" FromRole="FromRole_PETSITRelationName1PROFILEDATA" ToRole="ToRole_PETSITRelationName1PROFILEDATA"/>
+            </EntityType>
+            <Association Name="PETSITRelationNamePAYMENT">
+                <End Type="80eb04ffa7c34eac14233f0d.PETSIT" Multiplicity="1" Role="FromRole_PETSITRelationNamePAYMENT"/>
+                <End Type="80eb04ffa7c34eac14233f0d.PAYMENT" Multiplicity="*" Role="ToRole_PETSITRelationNamePAYMENT"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_PETSITRelationNamePAYMENT">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_PETSITRelationNamePAYMENT">
+                        <PropertyRef Name="___FK_737d95e23e69a680144497d4_00020"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="PETSITRelationName1PROFILEDATA">
+                <End Type="80eb04ffa7c34eac14233f0d.PETSIT" Multiplicity="1" Role="FromRole_PETSITRelationName1PROFILEDATA"/>
+                <End Type="80eb04ffa7c34eac14233f0d.PROFILEDATA" Multiplicity="*" Role="ToRole_PETSITRelationName1PROFILEDATA"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_PETSITRelationName1PROFILEDATA">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_PETSITRelationName1PROFILEDATA">
+                        <PropertyRef Name="___FK_737d95e23e69a680144497d4_00022"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="PAYMENT">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="CARDDETAILS" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CARDDETAILS"/>
+                <Property Name="SUBMIT" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SUBMIT"/>
+                <Property Name="___FK_737d95e23e69a680144497d4_00020" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_737d95e23e69a680144497d4_00020"/>
+            </EntityType>
+            <EntityType Name="PROFILEDATA">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="NAME" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="NAME"/>
+                <Property Name="DATA" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DATA"/>
+                <Property Name="CONTACT" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CONTACT"/>
+                <Property Name="___FK_737d95e23e69a680144497d4_00022" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_737d95e23e69a680144497d4_00022"/>
+            </EntityType>
+            <EntityType Name="TESTIMONIALS">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_737d95e23e69a680144497d4_00026" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_737d95e23e69a680144497d4_00026"/>
+            </EntityType>
+            <EntityType Name="CONFIRMATIOM">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_737d95e23e69a680144497d4_00030" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_737d95e23e69a680144497d4_00030"/>
+            </EntityType>
+            <EntityType Name="RATINGFEEDBACK">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_737d95e23e69a680144497d4_00034" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_737d95e23e69a680144497d4_00034"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
